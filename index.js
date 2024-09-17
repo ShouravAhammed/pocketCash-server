@@ -139,7 +139,7 @@ async function run() {
         .send({ success: true });
     });
 
-    // Logout
+    // Logout 
     app.post("/logout", async (req, res) => {
       try {
         res
@@ -165,7 +165,7 @@ async function run() {
       res.send(result);
     });
 
-    // get user role
+    // get user role 
     app.get("/role/:email", async (req, res) => {
       const { email } = req?.params;
       const { role } = await userCollection.findOne({ email });
